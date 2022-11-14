@@ -9,7 +9,7 @@ type Fund struct {
 	Desc      string       `json:"desc" gorm:"type:varchar(255)"`
 	Goals     int          `json:"goals" gorm:"type:int"`
 	Donated   int          `json:"donated" gorm:"type:int"`
-	UserID    int          `json:"-" gorm:"constraint:OnUpdate:CASCADE,OnDelete:CASCADE;"`
+	UserID    int          `json:"-" `
 	User      UserResponse `json:"user"`
 	Date      time.Time    `json:"date" gorm:"default:now()" `
 	CreatedAt time.Time    `json:"create_at"`
