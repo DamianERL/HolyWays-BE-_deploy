@@ -28,5 +28,6 @@ type UserResponse struct {
 }
 
 func (UserResponse) TableName() string {
-	return "Users"
+	return "users"
 }
+
