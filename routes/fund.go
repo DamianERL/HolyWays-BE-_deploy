@@ -13,7 +13,7 @@ func FundRoutes(r *mux.Router)  {
 	fundRepository := repositories.RepositoryFund(mysql.DB)
 	h := handlers.HandlerFund(fundRepository)
 
-	r.HandleFunc("/funds",middleware.Auth(h.FindFunds)).Methods("GET")
+	r.HandleFunc("/funds",h.FindFunds).Methods("GET")
 	r.HandleFunc("/fund/{id}",middleware.Auth(h.GetFund)).Methods("GET")
 	r.HandleFunc("/fundss",middleware.Auth(h.FindFundId)).Methods("GET")
 	r.HandleFunc("/fund",middleware.Auth(middleware.UploadFile(h.CreateFund))).Methods("POST")
