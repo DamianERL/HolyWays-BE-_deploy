@@ -17,7 +17,7 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 )
 
-// var imageprofil = "https://res.cloudinary.com/fnxr/image/upload/v1666926997/user_tfpsob.png"
+var imageprofil = "https://res.cloudinary.com/fnxr/image/upload/v1666926997/user_tfpsob.png"
 
 type handlerAuth struct {
 	AuthRepository repositories.AuthRepository
